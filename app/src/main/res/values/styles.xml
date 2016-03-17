@@ -13,8 +13,29 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <style name="AppButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/udacity_orange</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginLeft">4dp</item>
+        <item name="android:layout_marginRight">4dp</item>
+        <item name="android:padding">18dp</item>
+        <item name="android:layout_alignLeft">@id/title_id</item>
+        <item name="android:layout_alignRight">@id/title_id</item>
+        <item name="android:layout_centerHorizontal">true</item>item>
+        <item name="android:textSize">16sp</item>item>
+    </style>
+
+    <style name="AppButton.Red">
+        <item name="android:background">@color/red_button</item>
+        <item name="android:textColor">@color/button_text</item>
+    </style>
+
+
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
 
 </resources>

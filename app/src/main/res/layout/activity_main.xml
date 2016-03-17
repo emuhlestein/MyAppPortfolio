@@ -1,120 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.intelliviz.myappportfolio.MainActivity">
+    android:fillViewport="true">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/title_id"
-        android:text="@string/title_text"
-        android:textSize="24sp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:textIsSelectable="true"/>
+    <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="com.intelliviz.myappportfolio.MainActivity">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/spotify_streamer_id"
-        android:text="@string/spotify_streamer"
-        android:textSize="16sp"
-        android:layout_below="@+id/title_id"
-        android:layout_centerHorizontal="true"
-        android:layout_alignLeft="@id/title_id"
-        android:layout_alignRight="@id/title_id"
-        android:layout_marginTop="24dp"
-        android:layout_marginLeft="4dp"
-        android:layout_marginRight="4dp"
-        android:padding="18dp"
-        android:background="#F08C35" />
+        <TextView
+            android:id="@+id/title_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/title_text"
+            android:textIsSelectable="true"
+            android:textSize="24sp" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/scores_app_id"
-        android:text="@string/scores_app"
-        android:textSize="16sp"
-        android:layout_below="@+id/spotify_streamer_id"
-        android:layout_centerHorizontal="true"
-        android:layout_alignLeft="@id/title_id"
-        android:layout_alignRight="@id/title_id"
-        android:layout_marginTop="8dp"
-        android:layout_marginLeft="4dp"
-        android:layout_marginRight="4dp"
-        android:padding="18dp"
-        android:background="#F08C35" />
+        <Button
+            android:id="@+id/spotify_streamer_id"
+            style="@style/AppButton"
+            android:layout_below="@+id/title_id"
+            android:onClick="onSpotifyStreamerClick"
+            android:text="@string/spotify_streamer" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/lib_app_id"
-        android:text="@string/library_app"
-        android:textSize="16sp"
-        android:layout_below="@+id/scores_app_id"
-        android:layout_centerHorizontal="true"
-        android:layout_alignLeft="@id/title_id"
-        android:layout_alignRight="@id/title_id"
-        android:layout_marginTop="8dp"
-        android:layout_marginLeft="4dp"
-        android:layout_marginRight="4dp"
-        android:padding="18dp"
-        android:background="#F08C35" />
+        <Button
+            android:id="@+id/scores_app_id"
+            style="@style/AppButton"
+            android:layout_below="@+id/spotify_streamer_id"
+            android:onClick="onScoresAppClick"
+            android:text="@string/scores_app" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/build_it_bigger_id"
-        android:text="@string/build_it_bigger"
-        android:textSize="16sp"
-        android:layout_below="@+id/lib_app_id"
-        android:layout_centerHorizontal="true"
-        android:layout_alignLeft="@id/title_id"
-        android:layout_alignRight="@id/title_id"
-        android:layout_marginTop="8dp"
-        android:layout_marginLeft="4dp"
-        android:layout_marginRight="4dp"
-        android:padding="18dp"
-        android:background="#F08C35" />
+        <Button
+            android:id="@+id/lib_app_id"
+            style="@style/AppButton"
+            android:layout_below="@+id/scores_app_id"
+            android:onClick="onLibraryAppClick"
+            android:text="@string/library_app" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/xyz_reader_id"
-        android:text="@string/xyz_reader"
-        android:textSize="16sp"
-        android:layout_below="@+id/build_it_bigger_id"
-        android:layout_centerHorizontal="true"
-        android:layout_alignLeft="@id/title_id"
-        android:layout_alignRight="@id/title_id"
-        android:layout_marginTop="8dp"
-        android:layout_marginLeft="4dp"
-        android:layout_marginRight="4dp"
-        android:padding="18dp"
-        android:background="#F08C35" />
+        <Button
+            android:id="@+id/build_it_bigger_id"
+            style="@style/AppButton"
+            android:layout_below="@+id/lib_app_id"
+            android:onClick="onBuildItBiggerClick"
+            android:text="@string/build_it_bigger" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/my_app_id"
-        android:text="@string/capstone_app"
-        android:textSize="16sp"
-        android:layout_below="@+id/xyz_reader_id"
-        android:layout_centerHorizontal="true"
-        android:layout_alignLeft="@id/title_id"
-        android:layout_alignRight="@id/title_id"
-        android:layout_marginTop="8dp"
-        android:layout_marginLeft="4dp"
-        android:layout_marginRight="4dp"
-        android:padding="18dp"
-        android:textColor="#ffffff"
-        android:background="#AD1457" />
-</RelativeLayout>
+        <Button
+            android:id="@+id/xyz_reader_id"
+            style="@style/AppButton"
+            android:layout_below="@+id/build_it_bigger_id"
+            android:onClick="onXYZReaderClick"
+            android:text="@string/xyz_reader" />
+
+        <Button
+            android:id="@+id/my_app_id"
+            style="@style/AppButton.Red"
+            android:layout_below="@+id/xyz_reader_id"
+            android:onClick="onCapStoneAppClick"
+            android:text="@string/capstone_app" />
+
+    </RelativeLayout>
+</ScrollView>
